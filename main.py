@@ -58,10 +58,11 @@ for idx, row in df.iterrows():
 
     pass
 
-# TODO: turn `results` into a DataFrame and inspect it
 results_df = pd.DataFrame(results)
 results_df.head()
 
+
+# A KINDA USELESS GRAPH!?
 plt.plot(
     results_df['estimate_T1_linear'],
     results_df['estimate_T2_quadratic'],
@@ -72,7 +73,7 @@ plt.xlabel("Estimated fat fraction at T1 (%)")
 plt.ylabel("Estimated fat fraction at T2 (%)")
 plt.grid(True, alpha=0.3)
 plt.show()
-
+#####
 
 
 
@@ -160,7 +161,6 @@ plt.show()
 # MORE GRAPHHHHHHSSSSSSSSSS
 
 # ================= EXTRA GRAPHS =================
-from scipy.stats import spearmanr
 
 # --- combine fat fraction + clinical severity into one table (matched on subject_id) ---
 ff = pd.DataFrame({
